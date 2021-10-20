@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>For Recruiters</header>
+        <form action="#">
+            <div class="dbl-field">
+                <div class="field">
+                    <input type="text" placeholder="Enter your name" required>
+                    <i class="fa fa-user"></i>
+                </div>
+
+                <div class="field">
+                    <input type="text" placeholder="Enter company's name" required>
+                    <i class="fa fa-building"></i>
+                </div>
+            </div>
+
+            <div class="dbl-field">
+                <div class="field">
+                    <input type="number" placeholder="Enter your phone" required> 
+                    <i class="fa fa-phone"></i>
+                </div>
+
+                <div class="field">
+                    <input type="email" placeholder="Enter your email" required>
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+
+            <div class="dbl-field">
+                <div class="field">
+                    <input type="text" placeholder="Enter company website" required>
+                    <i class="fa fa-globe"></i>
+                </div>
+
+                <div class="field">
+                    <input type="text" placeholder="Enter Location" required>
+                    <i class="fa fa-map-marker"></i>
+                </div>
+            </div>
+
+            <div class="dbl-field-cont">
+                <div class="dbl-field2">
+                    <div class="field3">
+                        <h3>What is the type of Internship?</h3>
+                        <input type="checkbox" name="typeofjob">
+                        <label for="typeofjob">Work from home</label> <br>
+                        <input type="checkbox" name="typeofjob">
+                        <label for="typeofjob">Work from office</label> <br>
+                        <input type="checkbox" name="typeofjob" value="fulltime">
+                        <label for="typeofjob">Full time</label> <br>
+                        <input type="checkbox" name="typeofjob" value="parttime">
+                        <label for="typeofjob">Part time</label>
+                    </div>
+
+                    <div class="field3">
+                        <h3>Tenure of internship</h3>
+                        <div class="flex">
+                            <input type="radio" name="jobtype" value="1to3">
+                            <label for="jobtype">3 months</label>
+                        </div>
+                        <div class="flexy">
+                            <input type="radio" name="jobtype" value="3to6">
+                            <label for="jobtype">6 months</label>
+                        </div>
+                        <div class="flexy">
+                            <input type="radio" name="jobtype" value="6to9">
+                            <label for="jobtype">9 months</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trp-field-cont">
+                <div class="trp-field">
+
+                    <div class="field2">
+                        <h3 class="pad">Designation</h3>
+                        <select name="designation" id="designation">
+                            <option value="null" selected disabled>Select</option>
+                            <option value="hr">HR</option>
+                            <option value="founder">Founder</option>
+                            <option value="cmo/ceo">CMO/CEO</option>
+                            <option value="manager">Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="field2 middle">
+                        <h3 class="pad">No. of vacancies</h3>
+                        <input type="number" id="vacancy">
+                    </div>
+
+                    <div class="field2">
+                        <h3 class="pad">Stipend</h3>
+                        <select name="stipend" id="stipend">
+                            <option value="null" selected disabled>Select</option>
+                            <option value="low">3,000 - 5,000</option>
+                            <option value="medium">5,000 - 7,000</option>
+                            <option value="high">7,000 and above</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="trp-field-cont">
+                <h3>Which sector does your company fall under?</h3>
+                <div class="trp-field">
+                    <div class="field2">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="healthcare">Healthcare</label>
+                        <br>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="it">IT</label>
+                        <br>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="realstate">realstate</label>
+                    </div>
+
+                    <div class="field2">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="finance">finance</label>
+                        <br>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="education">education</label>
+                        <br>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="ngo">ngo</label>
+                    </div>
+
+                    <div class="field2">
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="e-commerce">e-commerce</label>
+                        <br>
+                        <input type="checkbox" name="check" onclick="onlyOne(this)">
+                        <label for="marketing-services">marketing-services</label>
+                        <br>
+                        <input type="checkbox" name="check" id="otherselect" onclick="onlyOne(this)">
+                        <label for="other">other:</label>
+                        <input type="text" id="otherdescp">
+                    </div>
+                </div>
+            </div>
+
+            <div class="trp-field-cont">
+                <h3>Select the position you want to hire for</h3>
+                <div class="trp-field">
+                    <div class="field2">
+                        <input type="checkbox" name="Marketing">
+                        <label for="Marketing">Marketing</label>
+                        <br>
+                        <input type="checkbox" name="Human-Resources">
+                        <label for="Human-Resources">Human Resources</label>
+                        <br>
+                        <input type="checkbox" name="Graphic-Designing">
+                        <label for="Graphic-Designing">Graphic Designing</label>
+                    </div>
+
+                    <div class="field2">
+                        <input type="checkbox" name="Operations">
+                        <label for="Operations">Operations</label>
+                        <br>
+                        <input type="checkbox" name="Sales">
+                        <label for="SB-development">Sales</label>
+                        <br>
+                        <input type="checkbox" name="Finance">
+                        <label for="Finance">Finance</label>
+                    </div>
+
+                    <div class="field2">
+                        <input type="checkbox" name="Consulting">
+                        <label for="Consulting">Consulting</label>
+                        <br>
+                        <input type="checkbox" name="Customer-Relations">
+                        <label for="Customer-Relations">Customer Relations</label>
+                        <br>
+                        <input type="checkbox" name="Market-Research">
+                        <label for="Market-Research">Market Research</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <textarea placeholder="Enter job description"></textarea>
+                <i class="fa fa-commenting"></i>
+            </div>
+
+            <div class="btn-area">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function onlyOne(checkbox) {
+            var checkboxes = document.getElementsByName('check')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            });
+        };
+
+    
+        var otherselect = document.getElementById('otherselect');
+        var otherdescp = document.getElementById('otherdescp');
+
+        otherselect.addEventListener('click', function(){
+            if (otherselect.checked == true){
+                otherdescp.style.display = "inline-block";
+            } else {
+                otherdescp.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
